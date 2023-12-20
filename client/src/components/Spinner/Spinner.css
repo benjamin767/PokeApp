@@ -1,0 +1,23 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .pikachu-spinner {
+    width: 10%;
+    height: 15%;
+    transform: translateX(0);
+    animation: spin 2s ease infinite;
+  }
+  
+  @keyframes spin {
+    0% { 
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+  }

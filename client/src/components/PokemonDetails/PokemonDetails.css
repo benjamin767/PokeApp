@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+.details {
+    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data_container {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 2hr 1hr 2hr;
+    grid-template-areas:
+  ". area1 ."
+  "area2 area2 area3";
+    background-color: #eee;
+    border-radius: 5px;
+    width: 85%;
+    color: #323;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: area1;
+}
+
+.name {
+    font-family: 'Mansalva';
+    font-size: 5em;
+    font-weight: bold;
+    margin: 1px;
+    color: rgb(26, 30, 252)
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-area: area2;
+}
+
+.image img{
+    height: 70%;
+    width: 80%;
+    filter: drop-shadow(5px 5px 15px black) drop-shadow(3px 3px 15px red) drop-shadow(6px 6px 25px gold);
+}
+
+.image p {
+    margin: 25px;
+}
+
+.data {
+    grid-area: area3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stats-measures p{
+    margin: 10px;
+}
+
+.stat-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.stat-name label {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.rod {
+    margin: auto;
+    outline: none;
+    width: 35%;
+    padding: 0;
+    background-color: #dedede;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.rodToRed {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff1100), color-stop(100%, #ff1100));
+    background-repeat: no-repeat;
+}
+
+.rodToYellow {
+    background-image: linear-gradient(to right, red , yellow);
+    background-repeat: no-repeat;
+}
+
+.rodToGreen {
+    background-image: linear-gradient(to right, red , yellow,green);
+    background-repeat: no-repeat;
+}
+
+.rod::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+.rod::-webkit-slider-thumb{
+    opacity: 0;
+}
