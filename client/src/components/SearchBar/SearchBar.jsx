@@ -1,27 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getOnePokemon } from "../../redux/actions";
+import "./Searchbar.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
-    const dispatch = useDispatch();
     const [ search, setSearch ] = useState("");
     const handleChange = (event) => {
         setSearch(event.target.value);
     };
-    const handleSubmit = (search) => {
-        dispatch(getOnePokemon(search));
-    }
+    
     return (<>
     <article>
-        <form onSubmit={handleSubmit(search)}>
+        <form>
             <input
                 value={search}
                 onChange={handleChange}
             />
-            <input 
-                type="button"
-                value="Buscar"
-            />
+            <Link to={`/${search}`}>
+                <div className="button">Buscar</div>
+            </Link>
         </form>
         <p></p>
     </article>

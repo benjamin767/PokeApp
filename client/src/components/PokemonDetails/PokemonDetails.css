@@ -46,7 +46,7 @@
 }
 
 .image img{
-    height: 70%;
+    height: 60%;
     width: 80%;
     filter: drop-shadow(5px 5px 15px black) drop-shadow(3px 3px 15px red) drop-shadow(6px 6px 25px gold);
 }
